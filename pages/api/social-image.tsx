@@ -152,6 +152,9 @@ export default withOGImage<'query', 'id'>({
 })
 
 const style = `
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -168,7 +171,7 @@ const style = `
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   padding: 0;
   margin: 0;
 }

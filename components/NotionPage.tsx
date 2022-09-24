@@ -30,7 +30,8 @@ import { PageAside } from './PageAside'
 import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
-
+import { ReactUtterances } from './ReactUtterances'
+// import { ReactCusdis } from 'react-cusdis'
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
@@ -247,6 +248,64 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+  let comments: React.ReactNode = null
+
+  // let pageAside: React.ReactChild = (
+  //   <div>
+  //     <br></br>
+  //     <img src={forhit} />
+  //   </div>
+  // )
+
+  // only display comments and page actions on blog post pages
+  if (isBlogPost) {
+    if (config.utterancesGitHubRepo) {
+      comments = (
+        <ReactUtterances
+          repo={config.utterancesGitHubRepo}
+          issueMap='issue-term'
+          issueTerm='title'
+          theme={isDarkMode ? 'photon-dark' : 'github-light'}
+        />
+      )
+      // } else if (config.cusdis) {
+      //   if (!config.cusdis.appId) {
+      //     console.warn('[cusdis]', 'appId is required')
+      //   }
+      //   comments = darkMode.value ? (
+      //     <ReactCusdis
+      //       style={{
+      //         width: '100%',
+      //         marginTop: '30px'
+      //       }}
+      //       attrs={{
+      //         host: config.cusdis.host || 'https://cusdis.com',
+      //         appId: config.cusdis.appId,
+      //         pageId: pageId,
+      //         pageTitle: title,
+      //         pageUrl: canonicalPageUrl,
+      //         theme: 'dark'
+      //       }}
+      //     ></ReactCusdis>
+      //   ) : (
+      //     <ReactCusdis
+      //       style={{
+      //         width: '100%',
+      //         marginTop: '30px'
+      //       }}
+      //       attrs={{
+      //         host: config.cusdis.host || 'https://cusdis.com',
+      //         appId: config.cusdis.appId,
+      //         pageId: pageId,
+      //         pageTitle: title,
+      //         pageUrl: canonicalPageUrl,
+      //         theme: 'light'
+      //       }}
+      //     ></ReactCusdis>
+      //   )
+    }
+  }
+
   return (
     <>
       <PageHead
@@ -281,6 +340,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         defaultPageCoverPosition={config.defaultPageCoverPosition}
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapImageUrl}
+       pageFooter={comments}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         footer={footer}

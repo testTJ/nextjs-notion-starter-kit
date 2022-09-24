@@ -9,12 +9,12 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'Jay',
+  domain: 'notion.bonojay.com',
+  author: 'Jay Baek',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Jay's Notion blog',
 
   // social usernames (optional)
   //twitter: 'transitive_bs',
@@ -29,6 +29,14 @@ export default siteConfig({
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
+  // Utteranc.es comments via GitHub issue comments (optional)
+  utterancesGitHubRepo: 'testTJ/nextjs-notion-starter-kit',
+ 
+  // Cusdis comment widget (optional)
+  // cusdis: {
+  //   appId: 'd39a1dc4-5580-4ad8-8d75-c6a486475b5a' // your website id
+  // },
+  
   // whether or not to enable support for LQIP preview images (optional)
   isPreviewImageSupportEnabled: true,
 
@@ -49,16 +57,16 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  // navigationStyle: 'default'
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'About me',
+      pageId: 'a355acc3f33f45aeac50154a33300011'
+    },
+    // {
+    //   title: 'Contact',
+    //   pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+    // }
+  ]
 })

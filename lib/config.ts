@@ -58,7 +58,10 @@ export const twitter: string | null = getSiteConfig('twitter', null)
 export const github: string | null = getSiteConfig('github', null)
 export const youtube: string | null = getSiteConfig('youtube', null)
 export const linkedin: string | null = getSiteConfig('linkedin', null)
-export const newsletter: string | null = getSiteConfig('newsletter', null)
+export const instagram: string | null = getSiteConfig('instagram', null)
+
+// Optional Cusdis widget https://cusdis.com
+// export const cusdis = getSiteConfig('cusdis', null)
 export const zhihu: string | null = getSiteConfig('zhihu', null)
 
 // default notion values for site-wide consistency (optional; may be overridden on a per-page basis)
@@ -73,6 +76,12 @@ export const defaultPageCover: string | null = getSiteConfig(
 export const defaultPageCoverPosition: number = getSiteConfig(
   'defaultPageCoverPosition',
   0.5
+)
+
+// Optional utteranc.es comments via GitHub issue comments
+export const utterancesGitHubRepo: string | null = getSiteConfig(
+  'utterancesGitHubRepo',
+  null
 )
 
 // Optional whether or not to enable support for LQIP preview images
@@ -143,6 +152,7 @@ export const site: Site = {
   rootNotionSpaceId,
   description
 }
+export const GAId = isDev ? null : 'G-GS550ST2WH'//process.env.NEXT_PUBLIC_GA_ID
 
 export const fathomId = isDev ? null : process.env.NEXT_PUBLIC_FATHOM_ID
 export const fathomConfig = fathomId

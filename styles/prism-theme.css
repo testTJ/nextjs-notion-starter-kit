@@ -95,6 +95,12 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: rgba(31, 41, 55, 1);
 }
+
+pre[class*='language-']:after,
+pre[class*='language-']:before {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
 .dark-mode code[class*='language-'],
 .dark-mode pre[class*='language-'] {
   color: rgba(249, 250, 251, 1);
