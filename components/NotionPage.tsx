@@ -30,7 +30,7 @@ import { PageAside } from './PageAside'
 import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
-import { ReactUtterances } from './ReactUtterances'
+//import { ReactUtterances } from './ReactUtterances'
 // import { ReactCusdis } from 'react-cusdis'
 import styles from './styles.module.css'
 
@@ -260,14 +260,14 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // only display comments and page actions on blog post pages
   if (isBlogPost) {
     if (config.utterancesGitHubRepo) {
-      comments = (
-        <ReactUtterances
-          repo={config.utterancesGitHubRepo}
-          issueMap='issue-term'
-          issueTerm='title'
-          theme={isDarkMode ? 'photon-dark' : 'github-light'}
-        />
-      )
+      //comments = (
+      //  <ReactUtterances
+      //    repo={config.utterancesGitHubRepo}
+      //    issueMap='issue-term'
+      //    issueTerm='title'
+      //    theme={isDarkMode ? 'photon-dark' : 'github-light'}
+      //  />
+      //)
       // } else if (config.cusdis) {
       //   if (!config.cusdis.appId) {
       //     console.warn('[cusdis]', 'appId is required')

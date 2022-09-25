@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Jay Baek',
 
   // open graph metadata (optional)
-  description: 'Jay's Notion blog',
+  description: 'Jay\'s Notion blog',
 
   // social usernames (optional)
   //twitter: 'transitive_bs',
