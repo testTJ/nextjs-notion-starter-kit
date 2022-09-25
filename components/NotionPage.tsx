@@ -248,7 +248,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
-  let comments: React.ReactNode = null
+  //let comments: React.ReactNode = null
 
   // let pageAside: React.ReactChild = (
   //   <div>
@@ -340,7 +340,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         defaultPageCoverPosition={config.defaultPageCoverPosition}
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapImageUrl}
-       pageFooter={comments}
+       //pageFooter={comments}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         footer={footer}
